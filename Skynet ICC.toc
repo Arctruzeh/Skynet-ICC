@@ -4,15 +4,21 @@
 ## Author: Arc https://github.com/Arctruzeh
 
 rotations\DK_Blood_Tank.lua
+rotations\Druid_Balance.lua
 rotations\Druid_Restoration.lua
 rotations\Hunter_Marksmen.lua
+rotations\Mage_Arcane.lua
 rotations\Mage_Fire.lua
 rotations\Paladin_Holy.lua
+rotations\Paladin_Protection.lua
+rotations\Paladin_Retribution.lua
 rotations\Priest_Shadow.lua
+rotations\Priest_Discipline.lua
 rotations\Rogue_Envenom.lua
 rotations\Shaman_Elemental.lua
 rotations\Warlock_Affliction.lua
 rotations\Warrior_Protection.lua
+rotations\Warrior_Fury.lua
 
 talents.lua
 general.lua

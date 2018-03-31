@@ -8,6 +8,7 @@ function Hunter_Marksmen()
   --Readiness
   if cdRemains(53209) ~= 0 --Chimera
   and cdRemains(3045) ~= 0 --Rapide Fire
+  and not UnitBuffID("player", 3045) --Rapid Fire
   then 
     _castSpell(23989) 
   end
@@ -61,10 +62,18 @@ function Hunter_Marksmen()
   _castSpell(49045,"target")
 
   --Rapid Fire
-  _castSpell(3045)
+  if ValidUnit("target", "enemy") then
+    _castSpell(3045)
+  end
 
   --Steady Shot
   _castSpell(49052,"target")
+
+  --Pet Attac
+  if UnitExists("playerpet")
+  and not UnitExists("playerpettarget") then
+    PetAttack("target")
+  end
 
   --Call Pet
   if UnitExists("playerpet") ~= 1 then 
