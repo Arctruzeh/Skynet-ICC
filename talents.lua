@@ -14,6 +14,12 @@ function talents()
     elseif IsSpellKnown(spellID) then
         return "Paladin_Holy"
     elseif IsSpellKnown(spellID) then
+        return "Paladin_Protection"
+    elseif IsSpellKnown(spellID) then
+        return "Paladin_Retribution"
+    elseif IsSpellKnown(spellID) then
+        return "Priest_Disc"
+    elseif IsSpellKnown(spellID) then
         return "Priest_Shadow"
     elseif IsSpellKnown(spellID) then
         return "Rogue_Assassination"
@@ -21,6 +27,8 @@ function talents()
         return "Shaman_Elemental"
     elseif IsSpellKnown(spellID) then
         return "Warlock_Affliction"
+    elseif IsSpellKnown(spellID) then
+        return "Warrior_Fury"
     elseif IsSpellKnown(spellID) then
         return "Warrior_Protection"
     end

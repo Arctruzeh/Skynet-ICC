@@ -26,8 +26,6 @@ function Hunter_Marksmen()
     _castSpell(19506) 
   end
 
-  local PlayerMana = 100 * UnitPower("player") / UnitPowerMax("player")
-
   --Viper
   if PlayerMana < 10 
   and not UnitBuffID("player", 34074) then 

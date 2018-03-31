@@ -78,3 +78,4 @@ function hasCastTime(unit)
     return true
   end
 end
+
