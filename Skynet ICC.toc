@@ -1,0 +1,22 @@
+## Interface: 30300
+## Title: Skynet ICC
+## Notes: A Multiclass ICC bot. Made or 10 man raids. Use with EWT.
+## Author: Arc https://github.com/Arctruzeh
+
+rotations\DK_Blood_Tank.lua
+rotations\Druid_Restoration.lua
+rotations\Hunter_Marksmen.lua
+rotations\Mage_Fire.lua
+rotations\Paladin_Holy.lua
+rotations\Priest_Shadow.lua
+rotations\Rogue_Envenom.lua
+rotations\Shaman_Elemental.lua
+rotations\Warlock_Affliction.lua
+rotations\Warrior_Protection.lua
+
+talents.lua
+general.lua
+lists.lua
+functions.lua
+
+Main.lua
