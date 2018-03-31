@@ -9,11 +9,11 @@ function talents()
         return "Hunter_Marksmen"
     elseif IsSpellKnown(31583) then
         return "Mage_Arcane"
-    elseif IsSpellKnown(spellID) then
+    elseif IsSpellKnown(55360) then
         return "Mage_Fire"
-    elseif IsSpellKnown(spellID) then
+    elseif IsSpellKnown(53563) then
         return "Paladin_Holy"
-    elseif IsSpellKnown(spellID) then
+    elseif IsSpellKnown(48827) then
         return "Paladin_Protection"
     elseif IsSpellKnown(spellID) then
         return "Paladin_Retribution"
