@@ -2,8 +2,8 @@ function Paladin_Holy()
 
     --who to focus
     if not UnitExists("focus") then
-      for _, unit in ipairs(PartyUnits) do
-        if UnitClass(unit) == "Warrior" then
+      for _, unit in ipairs(RaidUnits) do
+        if GetRaidTargetIndex("player") == 8 then
           FocusUnit(unit)
         end
       end
@@ -11,20 +11,22 @@ function Paladin_Holy()
   
     --Lowest HP Party Member
     local lowest = nil
-    for i=1, #PartyUnits do
-      if UnitExists(PartyUnits[i])
-      and (lowest == nil or getHp(PartyUnits[i]) < getHp(lowest)) then
-        lowest = PartyUnits[i]  
-      end
+    for i=1, GetNumRaidMembers() do
+        local unit = "raid"..i
+        if UnitExists(RaidUnit)
+        and ( lowest == nil or getHp(unit) < getHp(lowest) ) then
+            lowest = unit 
+        end
     end
   
     --Lowest HP Party Member without beacon
     local withoutbeacon = nil
-    for i=1, #PartyUnits do
-      if UnitExists(PartyUnits[i])
-      and UnitBuffID(PartyUnits[i], 53563) == nil
-      and (withoutbeacon == nil or getHp(PartyUnits[i]) < getHp(withoutbeacon)) then
-        withoutbeacon = PartyUnits[i] 
+    for i=1, GetNumRaidMembers() do
+      local unit = "raid"..i
+      if UnitExists(unit)
+      and UnitBuffID(unit, 53563) == nil
+      and (withoutbeacon == nil or getHp(unit) < getHp(withoutbeacon)) then
+        withoutbeacon = unit 
       end
     end
   
@@ -111,10 +113,18 @@ function Paladin_Holy()
     end
   
     --Sacred Shield
-    for _, unit in ipairs(PartyUnits) do
-      if UnitClass(unit) == "Death Knight" 
+    for _, unit in ipairs(RaidUnits) do
+      if GetRaidTargetIndex(unit) == 7 
       and not UnitBuffID(unit, 53601) then
         _castSpell(53601, unit)
+      end
+    end
+
+    if not UnitExists("focus") then
+      for _, unit in ipairs(RaidUnits) do
+        if GetRaidTargetIndex("player") == 8 then
+          FocusUnit(unit)
+        end
       end
     end
   
